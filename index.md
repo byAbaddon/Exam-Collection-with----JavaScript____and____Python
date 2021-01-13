@@ -23,7 +23,10 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src='https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F20%2Fd9%2F6d%2F20d96db773e87a340b8d52140310784b.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F331225747589067177%2F&tbnid=-lhhNAObZx7-6M&vet=12ahUKEwj9maaC-5nuAhVQ4oUKHRPKC8YQMygAegUIARCOAQ..i&docid=5kh4aijmkkclgM&w=750&h=937&q=sexy%20girls&ved=2ahUKEwj9maaC-5nuAhVQ4oUKHRPKC8YQMygAegUIARCOAQ')
+[Link](url) and ![Image](src)
+
+<img src=
+'https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F20%2Fd9%2F6d%2F20d96db773e87a340b8d52140310784b.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F331225747589067177%2F&tbnid=-lhhNAObZx7-6M&vet=12ahUKEwj9maaC-5nuAhVQ4oUKHRPKC8YQMygAegUIARCOAQ..i&docid=5kh4aijmkkclgM&w=750&h=937&q=sexy%20girls&ved=2ahUKEwj9maaC-5nuAhVQ4oUKHRPKC8YQMygAegUIARCOAQ' alt="Girl in a jacket" width="500" height="600">
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
