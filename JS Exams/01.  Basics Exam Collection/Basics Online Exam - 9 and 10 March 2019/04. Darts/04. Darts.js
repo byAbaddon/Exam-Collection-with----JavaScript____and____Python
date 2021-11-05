@@ -1,3 +1,31 @@
+function darts(args) {
+  let name = args.shift()
+  let startPoints = 301
+  let shots = incorrectShots = 0
+
+  while (startPoints > 0) {
+    points = 0
+    const [com, pts] = args.splice(0, 2)
+
+    if (com == 'Retire') return `${name} retired after ${incorrectShots} unsuccessful shots.`
+    com == 'Single' ? points += pts :
+    com == 'Double' ? points += pts * 2 :
+    com == 'Triple' ? points += pts * 3 : null
+    
+    if (startPoints >= points) {
+      shots++
+      startPoints -= points
+    } else incorrectShots++
+  }
+  return `${name} won the leg with ${shots} shots.`
+}
+
+
+
+//------------------------------------------------------------(2)-----------------------------------
+
+
+
 function darts(...arg) {
     let correctShots = 0
     let incorrectShots = 0
