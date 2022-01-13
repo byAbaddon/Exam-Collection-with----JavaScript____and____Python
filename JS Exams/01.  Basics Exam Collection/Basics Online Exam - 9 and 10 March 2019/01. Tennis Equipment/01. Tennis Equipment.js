@@ -1,14 +1,18 @@
-function tennisEquipment(...arg) {
-    let [priceOneRocket, rocketCount, sneakersCount] = [...arg.map(Number)]
+function fruitMarket(...arguments) {
+  let [strawberriesPrice, bananas, oranges, raspberries, strawberries] = arguments.map(Number)
 
-    let allRocketPrice = priceOneRocket * rocketCount
-    let oneSneakersPrice = priceOneRocket / 6
-    let allSneakersPrice = sneakersCount * oneSneakersPrice
-    let otherEquipment = (allRocketPrice + allSneakersPrice) * 0.20
-    let totalPrice = allRocketPrice + allSneakersPrice + otherEquipment
+  let raspberriesKg = strawberriesPrice / 2
+  let orangesKg = raspberriesKg * 0.6
+  let bananasKg = raspberriesKg * 0.2
 
-    console.log(`Price to be paid by Djokovic ${Math.floor(totalPrice / 8)}`)
-    console.log(`Price to be paid by sponsors ${(Math.ceil(totalPrice * 7 / 8))}`)
+  let total = raspberriesKg * raspberries +
+    orangesKg * oranges +
+    bananasKg * bananas +
+    strawberriesPrice * strawberries
+
+  return total.toFixed(2)
+
 }
 
-//tennisEquipment(850, 4, 2)
+// console.log(fruitMarket(48, 10, 3.3, 6.5, 1.7))  // 333.12
+// console.log(fruitMarket(63.5, 3.57, 6.35, 8.15, 2.5, )) // 561.15
