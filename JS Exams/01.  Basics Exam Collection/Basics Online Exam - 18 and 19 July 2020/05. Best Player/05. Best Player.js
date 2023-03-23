@@ -1,3 +1,13 @@
+function bestPlayer(arg) {
+  let name = goals = null
+  for (i = 0; i < arg.length; i+= 2) 
+    if (goals < +arg[i + 1])
+      [name, goals] = [arg[i], +arg[i + 1]] 
+  console.log(name, 'is the best player!', `\nHe has scored ${goals} ${goals < 3 ? 'goals.' : 'goals and made a hat-trick !!!'}`)
+}
+
+//-----------------------------------------------(2)------------------------------------------
+
 function bestPlayer(arr) {
     const playersObj = {}
 
