@@ -17,7 +17,7 @@ if total_price > 4000:
 elif 2500 < total_price <= 4000:
     total_price *= 0.90
 
-if cup_picture == 'Y' and is_take_a_photo != True:
+if cup_picture == 'Y' and not is_take_a_photo:
         total_price += ticket_count * 40
 
 print(f'{total_price:.2f}')
