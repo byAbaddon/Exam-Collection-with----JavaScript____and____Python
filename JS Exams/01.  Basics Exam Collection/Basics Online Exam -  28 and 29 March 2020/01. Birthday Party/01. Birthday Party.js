@@ -1,3 +1,6 @@
+rent => +rent + rent * .20 + rent * .20 * .55 + rent / 3
+//-------------------------------------------(2)--------------------
+
 function birthdayParty(rent) {
   rent =  Number(rent) 
   const cake = rent * 0.2
