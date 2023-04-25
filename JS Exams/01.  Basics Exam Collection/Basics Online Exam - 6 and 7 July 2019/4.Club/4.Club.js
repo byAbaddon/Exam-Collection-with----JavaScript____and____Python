@@ -1,4 +1,20 @@
 function club(arg, sum = 0, totalSum = 0) {
+  arg.includes('Party!') ? arg.pop() : null
+  let money = arg.shift()
+
+  for (let i = 0; i < arg.length; i+= 2) {
+    sum = arg[i].length * arg[i+1]
+    totalSum += sum % 10 & 1 ? sum * 0.75 : sum
+  }
+
+  let income =`\nClub income - ${totalSum.toFixed(2)} leva.`
+  if (money > totalSum) return `We need ${(money - totalSum).toFixed(2)} leva more.${income}`
+  else return `Target acquired.${income}`
+}
+
+//---------------------------------------------------------------------(2)--------------------
+
+function club(arg, sum = 0, totalSum = 0) {
   let money = arg.shift()
 
   for (let i = 0; i < arg.length; i += 2) {
@@ -14,21 +30,6 @@ function club(arg, sum = 0, totalSum = 0) {
   }
 }
 
-
-//---------------------------------------------------------------------(2)--------------------
-function club(arg, sum = 0, totalSum = 0) {
-  let money = arg.shift()
-
-  for (let i = 0; i < arg.length; i+= 2) {
-    if (arg[i] == "Party!") break
-    sum = arg[i].length * arg[i+1]
-    totalSum += sum % 10 & 1 ? sum * 0.75 : sum
-  }
-
-  let income =`\nClub income - ${totalSum.toFixed(2)} leva.`
-  if (money > totalSum) return `We need ${(money - totalSum).toFixed(2)} leva more.${income}`
-  else return `Target acquired.${income}`
-}
 
 //--------------------------------------------------------------------(3)----------------------
 
