@@ -1,3 +1,21 @@
+function club(arg, sum = 0, totalSum = 0) {
+  let money = arg.shift()
+
+  for (let i = 0; i < arg.length; i += 2) {
+    if (arg[i] == "Party!") break
+    sum = arg[i].length * arg[i+1]
+    totalSum += sum % 10 & 1 ? sum * 0.75 : sum
+  }
+
+  if (money > totalSum) {
+    console.log(`We need ${(money - totalSum).toFixed(2)} leva more.\nClub income - ${totalSum.toFixed(2)} leva.`);
+  } else {
+    console.log(`Target acquired.\nClub income - ${totalSum.toFixed(2)} leva.`);
+  }
+}
+
+//--------------------------------------------------------------------(2)----------------------
+
 function club(arg) {
   let money = arg.shift()
   let [cocktailName, numberCocktail, sum, totalSum] = ['', 0, 0, 0]
