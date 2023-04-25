@@ -1,4 +1,4 @@
-function club(arg, sum = 0, totalSum = 0) {
+function club(arg, sum=0, totalSum=0) {
   arg.includes('Party!') ? arg.pop() : null
   let money = arg.shift()
 
@@ -9,7 +9,7 @@ function club(arg, sum = 0, totalSum = 0) {
 
   let income =`\nClub income - ${totalSum.toFixed(2)} leva.`
   if (money > totalSum) return `We need ${(money - totalSum).toFixed(2)} leva more.${income}`
-  else return `Target acquired.${income}`
+  return `Target acquired.${income}`
 }
 
 //---------------------------------------------------------------------(2)--------------------
