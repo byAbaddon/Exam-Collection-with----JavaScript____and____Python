@@ -1,15 +1,15 @@
 function memoryGame(arr) {
   arr.pop()
   let board = arr.shift().split(' ')
-  let moves = 0
+  let move = 0
 
-  while (board.length > 0 &&  arr.length > 0) {
-    moves++
+  while (board.length && arr.length) {
+    move++
     const [fIndex, sIndex] = arr.shift().split(' ')
     let [firstEl, secondEl] = [board[fIndex], board[sIndex]]
 
-    if (firstEl == undefined || secondEl == undefined) {
-      board.splice(Math.floor(board.length / 2), 0, `-${moves}a`, `-${moves}a`)
+    if (fIndex == sIndex || firstEl == undefined || secondEl == undefined) {
+      board.splice(Math.floor(board.length / 2), 0, `-${move}a`, `-${move}a`)
       console.log('Invalid input! Adding additional elements to the board')
 
     } else if (firstEl == secondEl) {
@@ -21,9 +21,8 @@ function memoryGame(arr) {
     }
   }
 
-  return board.length > 0 ? `Sorry you lose :(\n${board.join(' ')}` : `You have won in ${moves} turns!`
+  return board.length ? `Sorry you lose :(\n${board.join(' ')}` : `You have won in ${move} turns!`
 }
-
 
 
 // console.log(memoryGame(
