@@ -1,6 +1,4 @@
 function manOWar(input) {
-  const getShipStatus = ship => ship.reduce((a, b) => a + b)
-
   let pirateShip = input.shift().split('>').map(Number)
   let warShip = input.shift().split('>').map(Number)
   let healthStatus = +input.shift()
@@ -27,7 +25,7 @@ function manOWar(input) {
       console.log(`${status} sections need repair.`)
     }
   }
-
+  const getShipStatus = ship => ship.reduce((a, b) => a + b)
   return `Pirate ship status: ${getShipStatus(pirateShip)}\nWarship status: ${getShipStatus(warShip)}`
 }
 
