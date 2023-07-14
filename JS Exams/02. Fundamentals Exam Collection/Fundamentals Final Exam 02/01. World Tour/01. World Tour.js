@@ -5,7 +5,7 @@ function worldTour(arr) {
   while (arr.length) {
     const [command, arg1, arg2] = arr.shift().split(':').map(el => isNaN(el) ? el : Number(el))
  
-    if (command === 'Add Stop') {
+    if (command == 'Add Stop') {
       let [index, country] = [arg1 ,arg2]
       if (index >= 0 && index < destination.length)
         destination = destination.slice(0, index) + country + destination.slice(index)
