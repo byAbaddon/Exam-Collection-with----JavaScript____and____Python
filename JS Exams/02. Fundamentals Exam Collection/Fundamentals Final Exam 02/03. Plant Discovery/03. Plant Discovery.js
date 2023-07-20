@@ -10,7 +10,7 @@ function plantDiscovery(arr) {
     plantObj[plan] = {rarity, 'rating':[]}  
   }
 
-  while (arr.length > 0) {
+  while (arr.length) {
     const [command, plan, points] = arr.shift().match(/[^':\s-]+/g)
     if (!plantObj.hasOwnProperty(plan)) {
       console.log('error')
@@ -44,7 +44,7 @@ function plantDiscovery(arr) {
     plantObj[plan] = {rarity, 'rating':[]}  
   }
 
-  while (arr.length > 0) {
+  while (arr.length) {
     const [command, plan, points] = arr.shift().match(/[^':\s-]+/g)
     if (!plantObj.hasOwnProperty(plan)) {
       console.log('error')
