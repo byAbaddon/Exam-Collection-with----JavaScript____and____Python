@@ -34,6 +34,7 @@ else:
     print('The king is safe!')
 
 
+
 '''
 . . . . . . . .
 Q . . . . . . .
