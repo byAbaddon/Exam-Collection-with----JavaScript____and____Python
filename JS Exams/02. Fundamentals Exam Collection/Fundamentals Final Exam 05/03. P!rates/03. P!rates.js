@@ -1,3 +1,5 @@
+//----------------------------------------------  with sort condition
+
 function pirates(arr) {
   arr.pop()
   let dataObj = {}
@@ -61,6 +63,59 @@ function pirates(arr) {
 
 }
   
+
+//-----------------------------------------------------whithout sort conditin
+
+function pirates(data) {
+  let map = {}
+ 
+  while (data[0] != 'Sail') {
+    let [town, population, gold] = data.shift().split('||').map(x => isNaN(x) ? x : +x)
+ 
+    if (!map.hasOwnProperty(town)) {
+      map[town] = { population, gold }
+    } else {
+      map[town].population += population
+      map[town].gold += gold
+    }
+  }
+ 
+  data.shift()
+  while (data[0] != 'End') {
+    let [action, town, arg1, arg2] = data.shift().split('=>').map(x => isNaN(x) ? x : +x)
+ 
+    if (action == 'Plunder') {
+      console.log(`${town} plundered! ${arg2} gold stolen, ${arg1} citizens killed.`)
+ 
+      map[town].population -= arg1
+      map[town].gold -= arg2
+ 
+      if (map[town].population <= 0 || map[town].gold <= 0) {
+        console.log(`${town} has been wiped off the map!`)
+        delete map[town]
+      }
+    } else if (action == 'Prosper') {
+      if (arg1 < 0) {
+        console.log('Gold added cannot be a negative number!')
+      } else {
+        map[town].gold += arg1
+        console.log(`${arg1} gold added to the city treasury. ${town} now has ${map[town].gold} gold.`)
+      }
+    }
+  }
+ 
+  if (!Object.keys(map).length) {
+    console.log('Ahoy, Captain! All targets have been plundered and destroyed!')
+  } else {
+    console.log(`Ahoy, Captain! There are ${Object.keys(map).length} wealthy settlements to go to:`)
+ 
+    Object.entries(map).forEach(([town, info]) => {
+      console.log(`${town} -> Population: ${info.population} citizens, Gold: ${info.gold} kg`)
+    })
+  }
+}
+ 
+ 
 
 // pirates([
 // 'Tortuga||345000||1250',
