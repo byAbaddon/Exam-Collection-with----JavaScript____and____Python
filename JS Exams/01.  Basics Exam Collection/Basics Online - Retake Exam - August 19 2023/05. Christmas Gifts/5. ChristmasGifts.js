@@ -20,4 +20,4 @@ function christmasGifts(arg) {
 
 }
 
-christmasGifts(["16", "20", "46", "12", "8", "20", "49", "Christmas"])
+//christmasGifts(["16", "20", "46", "12", "8", "20", "49", "Christmas"])
