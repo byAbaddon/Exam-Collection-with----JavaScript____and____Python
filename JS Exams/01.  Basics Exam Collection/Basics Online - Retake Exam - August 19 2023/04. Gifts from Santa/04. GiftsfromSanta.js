@@ -10,6 +10,6 @@ function giftSanta([N, M, S]) {
   return address.join(' ')
 }
 
-console.log(giftSanta(["1", "36", "12"]))
+//console.log(giftSanta(["1", "36", "12"]))
 
 
