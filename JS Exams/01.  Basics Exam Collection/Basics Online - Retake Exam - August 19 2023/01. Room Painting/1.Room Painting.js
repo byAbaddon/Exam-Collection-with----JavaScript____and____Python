@@ -13,4 +13,4 @@ function roomPainting(arg) {
 
 
 
-console.log(roomPainting(['10','8','2.2','5',]))
+//console.log(roomPainting(['10','8','2.2','5',]))
