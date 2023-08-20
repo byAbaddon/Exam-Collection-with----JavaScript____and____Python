@@ -11,4 +11,4 @@ function spaceship(arg) {
     else return 'The spacecraft is too big.' 
 }
 
-console.log(spaceship(["3.5", "4", "5", "1.70"]))
+//console.log(spaceship(["3.5", "4", "5", "1.70"]))
